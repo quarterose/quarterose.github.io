@@ -1,0 +1,375 @@
+body {
+  background-color: #f5f2e9;
+  font-family: "Century Gothic";
+  font-size: 120%;
+  font-weight: lighter;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  color: blue;
+}
+
+a:hover {
+  color: #a2c4c9;
+}
+
+/*Wrapper for all pages other than the homepage*/
+.wrapper {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(10, [ col-start] 1fr);
+}
+
+/*Wrapper for the homepage*/
+.wrapper-homepage {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(10, [ col-start] 1fr);
+}
+
+/*Wrapper for each art piece*/
+.art-piece-section {
+  background-color: #f2eff8;
+  box-shadow: 3px 3px 5px #e4f2ff;
+  display: grid;
+  grid-column: col-start 2 / span 8;
+  /*relates to main wrapper*/
+  grid-gap: 1em;
+  grid-template-columns: repeat(10, [ col-start] 1fr);
+  padding-bottom: 3%;
+}
+
+/*Elements that are children of the 2 main wrappers*/
+#main-header {
+  border-bottom: 1vw solid #5b5b5b;
+  color: #5b5b5b;
+  font-size: 150%;
+  grid-column: col-start 3 / span 6;
+  /*relates to wrapper-homepage*/
+  padding-top: 10vh;
+  text-align: center;
+  text-shadow: 1px 1px 2px #d9ead3;
+}
+
+h2 {
+  border-bottom: 1vw solid #5b5b5b;
+  color: #5b5b5b;
+  font-size: 120%;
+  grid-column: col-start 1 / span 3;
+  /*relates to the main wrapper*/
+  padding: 2.5%;
+  text-shadow: 1px 1px 2px #ead1dc;
+}
+
+h3 {
+  color: #9a8bec;
+  font-size: 130%;
+  grid-column: col-start 4 / span 7;
+  /*relates to the main wrapper*/
+  margin: 5%;
+}
+
+#home-section {
+  background-color: white;
+  box-sizing: border-box;
+  font-size: 110%;
+  grid-column: col-start 2 / span 8;
+  /*relates to wrapper-homepage*/
+  grid-row: 3;
+  margin-bottom: 5%;
+  padding: 4%;
+}
+
+.section-pages, .about-me {
+  background-color: white;
+  box-shadow: 4px 4px 2px #a4a69b;
+  box-sizing: border-box;
+  font-size: 110%;
+  grid-column: col-start 2 / span 8;
+  /*relates to the the main wrapper*/
+  margin-bottom: 5%;
+  padding: 5%;
+  padding-bottom: 3%;
+}
+
+nav {
+  box-sizing: border-box;
+  font-size: 120%;
+  grid-column: col-start 2 / span 8;
+  /*relates to wrapper-homepage*/
+  grid-row: 2;
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+  margin: 4%;
+}
+
+nav a {
+  color: #5b5b5b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffe599;
+}
+
+footer {
+  background-color: #5b5b5b;
+  box-sizing: border-box;
+  color: white;
+  grid-column: col-start / span 10;
+  /*relates to the homepage-wrapper and the main wrapper*/
+  padding: 3%;
+  text-align: center;
+  width: 100%;
+}
+
+/*Children of #homepage-section*/
+/*Change the appearence of the navigation menu link*/
+#introduction>p:nth-of-type(2) a {
+  color: blue;
+  text-decoration: none;
+}
+
+/*Centers the GIF images inside the section*/
+.home-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+/*The.about-me section and its children*/
+.about-me {
+  display: flex;
+  flex-flow: column wrap;
+  /*display its children in a column*/
+  margin: 5%;
+}
+
+#pixel-photo {
+  border-radius: 50%;
+  max-width: 35%;
+}
+
+table {
+  box-sizing: border-box;
+  display: inline;
+  /*makes it an inline element*/
+  font-size: 70%;
+}
+
+td, th {
+  border-bottom: thin solid grey;
+  color: black;
+  text-align: left;
+}
+
+/*Lists and their children*/
+/*In the about page*/
+dl {
+  color: grey;
+  background-color: #f5f2e9;
+  border: grey dotted;
+  font-family: monospace;
+  font-size: 120%;
+  height: 50%;
+  margin: auto;
+  margin-bottom: 3%;
+  overflow: scroll;
+  padding: 3%;
+  padding-bottom: 5%;
+  width: 70%;
+}
+
+dd {
+  margin: 1%;
+  padding: 1.5%;
+}
+
+ol {
+  background-color: #dddaf2;
+  border: 0.35rem #ffe599 double;
+  box-shadow: 3px 3px 5px #f7eea7;
+  box-sizing: border-box;
+  margin-bottom: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  max-width: 45%;
+  padding: 5%;
+  padding-left: 10%;
+}
+
+/*In the art-pieces page*/
+ol a {
+  color: #7d72ba;
+  font-weight: bold;
+  overflow: scroll;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #e5e2f7;
+}
+
+ol li {
+  padding: 3%;
+}
+
+ol li::marker {
+  color: #f7eea7;
+  text-shadow: 1px 1px 2px #7d72ba;
+}
+
+/*In the contact page*/
+blockquote {
+  color: #9e7639;
+  background-color: #dddaf2;
+  border: 0.35rem #ffe599 double;
+  box-shadow: 3px 3px 5px #f7eea7;
+  font-family: "Bodoni MT";
+  font-size: 130%;
+  font-weight: bold;
+  margin: auto;
+  padding: 3%;
+  text-align: center;
+  text-shadow: 4px 4px 6px #f7eea7;
+}
+
+/*Children of .art-piece-section */
+.art-piece {
+  border: 1.5rem #f7eea7 groove;
+  /*acts as a frame for the drawing*/
+  box-sizing: border-box;
+  grid-column: col-start 1 / span 5;
+  /*relates to .art-piece-section wrap*/
+  margin: auto;
+  max-width: 80%;
+}
+
+.poem {
+  color: #969273;
+  box-sizing: border-box;
+  font-style: italic;
+  grid-column: col-start 6 / span 6;
+  /*relates to .art-piece-section wrap*/
+  margin: auto;
+  max-width: 90%;
+  padding: 3%;
+  text-align: center;
+}
+
+/*Inline elements*/
+/*Makes the first letter of the #introduction big and bold*/
+#introduction>p:first-of-type::first-letter {
+  font-size: 200%;
+  font-weight: bolder;
+}
+
+/*Makes the first letter of each poem slightly bigger*/
+.poem::first-letter {
+  font-size: 150%;
+}
+
+/*Styles the main title, the item-name "Flower" and the author's name*/
+.main-title {
+  color: #7d72ba;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px #ffe599;
+}
+
+.item-name {
+  color: #ea9999;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px #fce5cd;
+}
+
+.name, footer a {
+  color: #8e7cc3;
+  font-weight: bolder;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #ffe599;
+}
+
+/*Removes italic property from the address*/
+address {
+  font-style: normal;
+}
+
+/*Changing the properties for 4 elements for large screens for a better display*/
+@media only screen and (min-width: 1125px) {
+  body {
+    font-size: 120%;
+  }
+
+  .poem {
+    font-size: 125%;
+  }
+
+  .home-image {
+    margin: 3%;
+    width: 180%;
+  }
+
+  h3 {
+    font-size: 190%;
+  }
+}
+
+/*Changing the properties of 10 elements for smaller screens for a better display*/
+@media only screen and (max-width: 594px) {
+  body {
+    font-size: 80%;
+  }
+
+  dl {
+    font-size: 100%;
+  }
+
+  #main-header {
+    font-size: 100%;
+  }
+
+  nav {
+    font-size: 100%;
+    grid-column: col-start / span 9;
+  }
+
+  .navbar ul {
+    padding: 0;
+  }
+
+  .section-pages {
+    padding-bottom: 10%;
+  }
+
+  .art-piece-section {
+    display: grid;
+    grid-template-columns: repeat(12, [ col-start] 1fr);
+  }
+
+  h3 {
+    grid-column: col-start / span 12;
+    grid-row: 1;
+    text-align: center;
+  }
+
+  .art-piece {
+    border: 0.75rem #f7eea7 groove;
+    grid-column: col-start 2/ span 10;
+    grid-row: 2;
+  }
+
+  .poem {
+    grid-column: col-start 2/ span 10;
+    grid-row: 3;
+  }
+
+  ol {
+    font-size: 70%;
+  }
+}
